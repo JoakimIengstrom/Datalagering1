@@ -9,8 +9,12 @@ SELECT *
 FROM [Restaurant]
 
 SELECT *
-FROM [Food_Package]
+FROM [Food_Content]
 
-SELECT Type_of_Food, Username
+SELECT *
+FROM [Sales]
+
+SELECT Food_Category, Full_Name
 FROM [Food_Package]
 JOIN [Users] ON (ID=1)	
+
