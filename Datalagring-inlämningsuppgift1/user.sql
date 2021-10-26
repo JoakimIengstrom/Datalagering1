@@ -2,5 +2,18 @@
 USE [Food_Rescue]
 GO
 
-SELECT [Product_ID]
-FROM 
+SELECT *
+FROM [Food_Content]
+Where Vegan = 'Yes'
+
+SELECT *
+FROM [Food_Content]
+Where Meat = 'Yes'
+
+SELECT *
+FROM [Food_Content]
+Where Vegetarian = 'Yes'
+
+Select Count(Content)
+FROM [Food_Content]
+Where Vegetarian = 'Yes'

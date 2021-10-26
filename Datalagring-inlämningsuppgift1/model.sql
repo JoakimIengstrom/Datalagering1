@@ -21,7 +21,7 @@ GO
 CREATE TABLE [Users] (
 
 	ID						INT					identity, 
-	Full_Name				nvarchar(18)		not null,
+	Full_Name				nvarchar(25)		not null,
 	[Password]				nvarchar(18)		not null check(len([Password]) > 7),
 	PassReg					Date				not null, 
 	Email					nvarchar(50)
@@ -72,24 +72,26 @@ CREATE TABLE [Sales] (
 	PRIMARY KEY				(Order_ID)
 )
 
---SET IDENTITY_INSERT [Users] ON
+-- Insert data into [Users]
 INSERT INTO [Users] VALUES ('Joakim Engström', 'Password1', GETDATE(), 'test1@test.com')
-INSERT INTO [Users] VALUES ('Joakim2', 'Password2', GETDATE(), 'test2@test.com')
---SET IDENTITY_INSERT [Users] OFF
+INSERT INTO [Users] VALUES ('Jonas Engström', 'Password2', GETDATE(), 'test2@test.com')
+INSERT INTO [Users] VALUES ('Jonas Alexandersson', 'Password3', GETDATE(), 'test3@test.com')
+INSERT INTO [Users] VALUES ('Sandra Domingo', 'Password4', GETDATE(), 'test4@test.com')
+INSERT INTO [Users] VALUES ('Rickard Hartman', 'Password5', GETDATE(), 'test5@test.com')
+INSERT INTO [Users] VALUES ('Nunnie Djurberg', 'Password6', GETDATE(), 'test6@test.com')
 
-SET IDENTITY_INSERT [Restaurant] ON
-INSERT INTO [Restaurant] (Resturant_ID, Resturant_Name, City, Phonenumber) VALUES (4, 'Pizzerian', 'Bohus', '0771223322')
-INSERT INTO [Restaurant] (Resturant_ID, Resturant_Name, City, Phonenumber) VALUES (9, 'Mojjen', 'Bohus', '0771448822')
-SET IDENTITY_INSERT [Restaurant] OFF
+INSERT INTO [Restaurant] VALUES ('Pizzerian', 'Bohus', '0771223322')
+INSERT INTO [Restaurant] VALUES ('Mojjen', 'Bohus', '0771448822')
 
-SET IDENTITY_INSERT [Food_Package] ON
-INSERT INTO [Food_Package] (Product_ID, Food_Box, Food_Category, Price, [User_ID], Resturant_ID) VALUES (5, 'Pizza_Margarita', 'Non_Vegan', 100, 1, 7)
-INSERT INTO [Food_Package] (Product_ID, Food_Box, Food_Category, Price, [User_ID], Resturant_ID) VALUES (12, 'Pizza_LaPesto', 'Vegetarian', 100, 1, 6)
-SET IDENTITY_INSERT [Food_Package] OFF
+INSERT INTO [Food_Package] VALUES ('Pizza_Margarita', 'Non_Vegan', 100, 1, 7)
+INSERT INTO [Food_Package] VALUES ('Pizza_LaPesto', 'Vegetarian', 100, 1, 6)
 
-SET IDENTITY_INSERT [Food_Content] ON
-INSERT INTO [Food_Content] (Product_ID, Content, Meat, Fish, Chicken, Vegan, Vegetarian) VALUES (20, 'Food Text of Content', Null, Null, Null, 'Yes', 'Yes')
-SET IDENTITY_INSERT [Food_Content] OFF
+--Product_ID (Automatiskt), Content, Meat, Fish, Chicken, Vegan, Vegetarian
+INSERT INTO [Food_Content] VALUES ('Vegan Food', Null, Null, Null, 'Yes', 'Yes')
+INSERT INTO [Food_Content] VALUES ('Meat without Diary', 'Yes', Null, Null, Null, Null)
+INSERT INTO [Food_Content] VALUES ('Fish Stew', Null, 'Yes', Null, Null, Null)
+INSERT INTO [Food_Content] VALUES ('Vegetarian', Null, Null, Null, Null, 'Yes')
+INSERT INTO [Food_Content] VALUES ('Chicken Faita', Null, Null, 'Yes', Null, Null)
 
 SET IDENTITY_INSERT [Sales] ON
 INSERT INTO [Sales] (Order_ID, [User_ID], Product_ID, Quantity, SUM_Price, Resturant_ID, Sales_Date) VALUES (1000, 1, 5, 1, 100, 7, GETDATE())
