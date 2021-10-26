@@ -12,9 +12,9 @@ SELECT *
 FROM [Food_Content]
 
 SELECT *
-FROM [Sales]
+FROM [Order]
 
 SELECT Food_Category, Full_Name
 FROM [Food_Package]
-JOIN [Users] ON (ID=1)	
+JOIN [Users] ON (ID=1) OR (ID=2)	
 
