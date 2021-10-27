@@ -22,8 +22,6 @@ I denna kursen ska vi utgå i från [Karma](https://www.karma.life/)s affärsid�
 att underlätta försäljning av lunchlådor som nått sitt bästföre datum. Vår tjänst kommer
 att heta food-rescue.
 
-<img src="img\12341234.png"></img>
-
 Vad detta innebär som minimum, är att vi i vår databas måste hålla koll på **användare**,
 de **restauranger** vi sammarbetar med och vilka **matlådor** som finns ute till försäljning
 _just nu_.
@@ -45,6 +43,9 @@ utifrån ovanstående scenario. Sedan ska du skriva fyra SQL filer.
 1. "diagram.pdf"
    - ett diagram på alla tabeller (kunder, restauranger och matpaket) och deras förhållanden
    - ska vara normaliserad till tredje graden
+
+![ERSchema](https://user-images.githubusercontent.com/89445183/139120525-dd759117-ad03-4b31-95cd-bbdcc9acba3e.png)
+
 2. "model.sql"
    - ska kunna köras för att skapa hela databasen enligt diagrammet och ska även fylla databasen med testdata
    - ska kunna köras flera gånger om utan att man behöver ta bort databasen emellanåt
