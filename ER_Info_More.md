@@ -1,4 +1,4 @@
-## Projektarbete
+# Inlämningsuppgift 1
 
 Länk till **[Github](https://github.com/JoakimIengstrom/Datalagring-inl-mningsuppgift1)**
 
@@ -14,8 +14,6 @@ Länk till **[Github](https://github.com/JoakimIengstrom/Datalagring-inl-mningsu
 ---
 
 ### Krav
-
-# Inlämningsuppgift 1
 
 ## Scenario
 
