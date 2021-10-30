@@ -14,30 +14,28 @@ Join [Customer] ON [Customer].ID = [Order].Customer_ID
 WHERE Food_Category = 'Vegan'
 
 --query för att modifiera en lunchlådas användar ID från NULL till ID:t på en användare som köper en låda
-/*
--- Använde inte null, men lägger till det. 
+--problem ett har inte Null på mina Lunchlådor. 
+
+--Börja med att kolla hur det ser ut. 
+SELECT * FROM [Food_Package]
+
+--Använde inte null, men lägger till det. 
+--Gör en alter för att fixa det, lägger till column sold
 Alter Table [Food_Package]
 ADD Sold varchar(5);
 
---Kollar så det funkar, väljer BOX_ID 45
+--Kikar hur det ser ut och nu finns även sold. 
 SELECT * FROM [Food_Package]
 
-SELECT * FROM [Order]
-
+--Gör en lösning där jag hämtar både order och customer. Gör nu en uppdatering av Sold.
+--Detta genom att göra en Uppdate där Orderns ID matchar Kundens ID. Där det matchar sätter jag
+--null till kundens ID. Detta funkar!
 UPDATE [Food_Package]
-SET Sold = 12
-WHERE BOX_ID = 2016;
-
-
-UPDATE
-    [Food_Package]
-SET
-    SOLD = 12
-FROM
-    [Order]
-    --JOIN [Order] ON [Order].Box_ID = [Food_Package].Box_ID       
-WHERE
-    [Order].Customer_ID = 12
+SET SOLD = [Customer].ID
+FROM [Food_Package]
+JOIN [Order] ON [Order].Box_ID = [Food_Package].Box_ID 
+Join [Customer] ON [Customer].ID = [Order].Customer_ID
+WHERE [Order].Customer_ID = [Customer].ID
 
 
 
@@ -50,7 +48,7 @@ Join [Food_Package] ON [Order].Box_ID = [Food_Package].Box_ID
 Join [Customer] ON [Customer].ID = [Order].Customer_ID
 WHERE ID = 3
 
-*/
+*
 
 
 
