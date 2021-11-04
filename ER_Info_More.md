@@ -1,15 +1,6 @@
-# Inlämningsuppgift 1
+# Datalagring del 1
 
 Länk till **[Github](https://github.com/JoakimIengstrom/Datalagring-inl-mningsuppgift1)**
-
----
-
-### Index
-
-[Rapport](#Rapport)  
-[Reflektioner](#Reflektioner)  
-[Implementering](#Implementering)  
-[BestCode](#BestCode)
 
 ---
 
@@ -110,27 +101,4 @@ Query:
   - En zip av repon
   - Länk till PR på GitHub
 
-
----
-
-### Schema
-
----
-### Rapport
-
-##### Reflektioner 
-[Index](#Index) 
-
-##### Planering
-
-##### Implementering
-
-##### Implementering  
-[Index](#Index)
-
-##### BestCode 
-
-[Index](#Index)  
-[Top](#Projektarbete) 
- 
 ---
