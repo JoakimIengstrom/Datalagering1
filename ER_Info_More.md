@@ -1,15 +1,6 @@
-# Inlämningsuppgift 1
+# Datalagring del 1
 
 Länk till **[Github](https://github.com/JoakimIengstrom/Datalagring-inl-mningsuppgift1)**
-
----
-
-### Index
-
-[Rapport](#Rapport)  
-[Reflektioner](#Reflektioner)  
-[Implementering](#Implementering)  
-[BestCode](#BestCode)
 
 ---
 
@@ -42,9 +33,10 @@ utifrån ovanstående scenario. Sedan ska du skriva fyra SQL filer.
 
 1. "diagram.pdf"
    - ett diagram på alla tabeller (kunder, restauranger och matpaket) och deras förhållanden
+
    - ska vara normaliserad till tredje graden
 
-![ERSchema](https://user-images.githubusercontent.com/89445183/139120525-dd759117-ad03-4b31-95cd-bbdcc9acba3e.png)
+![ER-Klar](https://user-images.githubusercontent.com/89445183/140033140-b5843125-63e5-4e0c-9d3d-862e2a37e439.png)
 
 2. "model.sql"
    - ska kunna köras för att skapa hela databasen enligt diagrammet och ska även fylla databasen med testdata
@@ -109,27 +101,4 @@ Query:
   - En zip av repon
   - Länk till PR på GitHub
 
-
----
-
-### Schema
-
----
-### Rapport
-
-##### Reflektioner 
-[Index](#Index) 
-
-##### Planering
-
-##### Implementering
-
-##### Implementering  
-[Index](#Index)
-
-##### BestCode 
-
-[Index](#Index)  
-[Top](#Projektarbete) 
- 
 ---
